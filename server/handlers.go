@@ -36,7 +36,7 @@ func eventsHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Simulate continuous data generation
 	go func() {
-		for i := 0; i < 10; i++ {
+		for i := 0; i++ {
 			time.Sleep(1 * time.Second)
 			dataChannel <- fmt.Sprintf("Message %d", i)
 		}
